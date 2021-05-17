@@ -59,7 +59,7 @@ resource "aws_athena_workgroup" "workgroup" {
 
 # create a glue database for objects in the bucket
 resource "aws_glue_catalog_database" "craas" {
-  name = "craas"
+  name = var.app_name
 }
 
 resource "aws_glue_catalog_table" "craas_links" {
